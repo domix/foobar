@@ -1,2 +1,2 @@
-echo $USERNAME
-echo $PASSWORD
+echo $THE_USERNAME
+echo $THE_PASSWORD
