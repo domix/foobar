@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example stage 1') {
             steps {
-                withCredentials(bindings: [credential(credentialsId: 'docker_registry_domix',
+                withCredentials(bindings: [credentials(credentialsId: 'docker_registry_domix',
                                                        
                                                        passwordVariable: 'PASSWORD')]) {
                   // 
