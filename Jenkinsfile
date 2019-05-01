@@ -3,17 +3,9 @@ pipeline {
     stages {
         stage('Example stage 1') {
             steps {
-                withCredentials(bindings: [credentials(credentialsId: 'docker_registry_domix',
-                                                       
-                                                       passwordVariable: 'PASSWORD')]) {
-                  // 
-                }
-            }
-        }
-        stage('Example stage 2') {
-            steps {
-                // 
-                echo "Hola World!"
+              withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_registry_domix', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+                sh './run.sh'
+              }
             }
         }
     }
