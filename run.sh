@@ -1,1 +1,2 @@
+echo $USERNAME
 echo $PASSWORD
