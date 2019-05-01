@@ -1,3 +1,3 @@
-echo "VARS_:"
+echo "VARS:"
 echo $THE_USERNAME
 echo $THE_PASSWORD
